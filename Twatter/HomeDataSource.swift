@@ -11,13 +11,13 @@ import LBTAComponents
 class HomeDatasource: Datasource {
     
     let users: [User] = {
-        let threshUser = User(name: "Thresh", username: "@bottomLane", bioText: "I'm the best support for Vayne, except I'm bronze.")
+        let markUser = User(name: "Mark Zuckerberg", username: "@markzuckerberg", bioText: "iPhone, iPad, iOS Programming Community. Join us to learn Swift, Objective-C and build iOS apps!", profileImage: #imageLiteral(resourceName: "ZuckProfile"))
         
-        return [threshUser]
+        let rayUser = User(name: "Ray Wenderlich", username: "@rwenderlich", bioText: "Ray Wenderlich is an iPhone developer and tweets on topics related to iPhone, software, and gaming. Check out our conference.", profileImage: #imageLiteral(resourceName: "RayProfile"))
+        
+        return [markUser, rayUser]
     }()
-    
-//    let words = ["user1", "user2", "user3"]
-    
+
     override func headerClasses() -> [DatasourceCell.Type]? {
         return [UserHeader.self]
     }

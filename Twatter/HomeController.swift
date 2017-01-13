@@ -100,22 +100,3 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         return CGSize(width: view.frame.width, height: 100)
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

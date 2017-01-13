@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9135B5671E28FBDF0071E025 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9135B5661E28FBDF0071E025 /* User.swift */; };
 		919CBF9C1E131B8000237EB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919CBF9B1E131B8000237EB2 /* AppDelegate.swift */; };
 		919CBFA31E131B8000237EB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 919CBFA21E131B8000237EB2 /* Assets.xcassets */; };
 		919CBFA61E131B8000237EB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 919CBFA41E131B8000237EB2 /* LaunchScreen.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9135B5661E28FBDF0071E025 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		919CBF981E131B8000237EB2 /* Twatter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twatter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		919CBF9B1E131B8000237EB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		919CBFA21E131B8000237EB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				91CB76FD1E1BA85D00FDBCB7 /* HomeDataSource.swift */,
+				9135B5661E28FBDF0071E025 /* User.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 			files = (
 				91CB76FE1E1BA85D00FDBCB7 /* HomeDataSource.swift in Sources */,
 				919CBF9C1E131B8000237EB2 /* AppDelegate.swift in Sources */,
+				9135B5671E28FBDF0071E025 /* User.swift in Sources */,
 				91CB76FC1E1BA82700FDBCB7 /* Cells.swift in Sources */,
 				91CB76F71E1B9BB900FDBCB7 /* HomeDatasourceController.swift in Sources */,
 				919CBFAE1E131CE200237EB2 /* HomeController.swift in Sources */,

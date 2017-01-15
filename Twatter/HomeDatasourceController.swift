@@ -9,6 +9,7 @@
 import LBTAComponents
 
 class HomeDatasourceController: DatasourceController {
+    
     // MARK: viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,8 +18,27 @@ class HomeDatasourceController: DatasourceController {
         self.datasource = homeDatasource
     }
     
+    // MARK: Gap between cells
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        
+        return 0
+    }
+    
+    
     override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width, height: 150)
+        
+        if let user = self.datasource?.item(indexPath) as? User {
+            // estimation height of cell based on user.bioText
+            let approximateWidthOfBioTextView = view.frame.width - 12 - 50 - 12
+            let size = CGSize(width: approximateWidthOfBioTextView, height: 1000)
+            let attributes = [NSFontAttributeName: UIFont.systemFont(ofSize: 15)]
+            let estimatedFrame = NSString(string: user.bioText).boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: attributes, context: nil)
+            
+            // height constants from padding from nameLabel/usernameLabel
+            return CGSize(width: view.frame.width, height: estimatedFrame.height + 76)
+        }
+        
+        return CGSize(width: view.frame.width, height: 200)
     }
     
     // For header

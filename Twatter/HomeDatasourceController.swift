@@ -29,13 +29,13 @@ class HomeDatasourceController: DatasourceController {
         
         if let user = self.datasource?.item(indexPath) as? User {
             // estimation height of cell based on user.bioText
-            let approximateWidthOfBioTextView = view.frame.width - 12 - 50 - 12
+            let approximateWidthOfBioTextView = view.frame.width - 12 - 50 - 12 - 2
             let size = CGSize(width: approximateWidthOfBioTextView, height: 1000)
             let attributes = [NSFontAttributeName: UIFont.systemFont(ofSize: 15)]
             let estimatedFrame = NSString(string: user.bioText).boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: attributes, context: nil)
             
             // height constants from padding from nameLabel/usernameLabel
-            return CGSize(width: view.frame.width, height: estimatedFrame.height + 76)
+            return CGSize(width: view.frame.width, height: estimatedFrame.height + 66)
         }
         
         return CGSize(width: view.frame.width, height: 200)

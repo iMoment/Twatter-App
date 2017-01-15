@@ -15,7 +15,9 @@ class HomeDatasource: Datasource {
         
         let rayUser = User(name: "Ray Wenderlich", username: "@rwenderlich", bioText: "Ray Wenderlich is an iPhone developer and tweets on topics related to iPhone, software, and gaming. Check out our conference.", profileImage: #imageLiteral(resourceName: "RayProfile"))
         
-        return [markUser, rayUser]
+        let stanleyUser = User(name: "Stanley Pan", username: "@iMoment", bioText: "Stanley Pan is an iOS developer who programs in Swift. Interests include productivity apps, UI/UX design, Guild Wars 2, and recent trends in software, hardware, and technology. You can find out more information on https://www.github.com/iMoment.", profileImage: #imageLiteral(resourceName: "MeProfile"))
+        
+        return [markUser, rayUser, stanleyUser]
     }()
 
     override func headerClasses() -> [DatasourceCell.Type]? {
